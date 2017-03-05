@@ -9,6 +9,6 @@ public class Stones
 	{
 		BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(bfr.readLine());
-		System.out.println(n % 2 == 1 ? "Alice" : "Bob");	
+		System.out.println(n % 2 == 1 ? "Alice" : "Bob");
 	}
 }
