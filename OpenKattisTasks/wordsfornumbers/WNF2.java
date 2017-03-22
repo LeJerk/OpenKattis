@@ -1,7 +1,6 @@
 package wordsfornumbers;
 
-import java.io.FileReader;
-import java.util.ArrayList;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class WNF2 {
@@ -10,8 +9,7 @@ public class WNF2 {
     static String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
     
 	public static void main(String[] args) throws Exception {
-		FileReader fr = new FileReader("C:\\ALL\\Inlärning\\Git\\OpenKattisTasks\\OpenKattisTasks\\Input\\1.in");
-		Scanner sc = new Scanner(fr);
+		Scanner sc = new Scanner(new InputStreamReader(System.in));
 		String line;
 		String[] asplit;
 		
@@ -19,7 +17,7 @@ public class WNF2 {
 		{
 			line = sc.nextLine();
 			asplit = line.split(" ");
-			System.out.print(asplit.length);
+			
 			for(int i=0; asplit.length > i;i++) 
 			{
 				if(!asplit[0].trim().isEmpty() && Character.isDigit(asplit[i].charAt(0))) 
@@ -30,16 +28,7 @@ public class WNF2 {
 				}
 				System.out.print(" ");
 			}
-			/*
-			for(String x : asplit) 
-			{
-				if(Character.isDigit(x.charAt(0)))
-				{
-					System.out.print(numberwords[]);
-					//System.out.print(x.substring(0, 1).toUpperCase() + x.substring(1));
-				}	
-			}	
-			*/
+			System.out.println();
 		}
 	}
 	
