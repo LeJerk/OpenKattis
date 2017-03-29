@@ -14,7 +14,7 @@ public class RBN
 		
 		String o, nReversed;
 		o = Integer.toBinaryString(n);
-		nReversed = new StringBuilder (o).reverse().toString();
+		nReversed = new StringBuilder(o).reverse().toString();
 		System.out.println(Integer.parseInt(nReversed, 2));
 	}	
 }
