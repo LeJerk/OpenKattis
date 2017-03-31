@@ -30,17 +30,16 @@ public class PN2 {
 			}
 			
 			StringBuilder first = new StringBuilder(name.substring(0, nLength / 2));
-			StringBuilder last;
-			
-			last = new StringBuilder(name.substring(nLength / 2 + 1));
-
-			if(first.length() > last.length() && name.length() != 4)
-				changes++;
+			StringBuilder last = new StringBuilder(name.substring(nLength / 2));
 			
 			for(int i = 0; i < last.length(); i++)
 			{
-				if(!(first.charAt(i == 0 ? first.length() - 1 : first.length() - 1 - i) == last.charAt(i)))
+				if(i == 0)
 				{
+					if(!(first.charAt(first.length() - 1) == last.charAt(1)))
+							changes++;
+				} else {
+					if(!(first.charAt(first.length() - 1 - i) == last.charAt(i)))
 					changes++;
 				}
 			}
