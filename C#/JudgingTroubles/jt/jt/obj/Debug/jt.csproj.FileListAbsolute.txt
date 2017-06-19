@@ -1,0 +1,6 @@
+C:\Users\e605248\Source\Repos\OpenKattis\C#\JudgingTroubles\jt\jt\bin\Debug\jt.exe.config
+C:\Users\e605248\Source\Repos\OpenKattis\C#\JudgingTroubles\jt\jt\bin\Debug\jt.exe
+C:\Users\e605248\Source\Repos\OpenKattis\C#\JudgingTroubles\jt\jt\bin\Debug\jt.pdb
+C:\Users\e605248\Source\Repos\OpenKattis\C#\JudgingTroubles\jt\jt\obj\Debug\jt.csprojResolveAssemblyReference.cache
+C:\Users\e605248\Source\Repos\OpenKattis\C#\JudgingTroubles\jt\jt\obj\Debug\jt.exe
+C:\Users\e605248\Source\Repos\OpenKattis\C#\JudgingTroubles\jt\jt\obj\Debug\jt.pdb
