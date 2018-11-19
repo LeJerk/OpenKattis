@@ -16,39 +16,43 @@ public class Main
 
 		int nbrOfFokz = sc.nextInt();
 		int timeout = sc.nextInt();
-
-		int[][] allResearchers = new int[nbrOfFokz][2];
-
-		for (int i = 0; i < nbrOfFokz; i++)
-		{
-			allResearchers[i][0] = sc.nextInt();
-			allResearchers[i][1] = sc.nextInt();
-		}
-
-		Arrays.sort(allResearchers, Comparator.comparing((int[] arr) -> arr[0]));
-
-		int nbrOfUnlocks = 1;
-		int unlockMinute = 0;
 		int arrive = 0;
 		int stay = 0;
 
-		for (int i = 0; i < allResearchers.length; i++)
-		{
-			if (i + 1 == allResearchers.length)
-			{
-				break;
-			}
+		int[][] allResearchersData = new int[nbrOfFokz][2];
+		int[] arrivalTimes = new int[nbrOfFokz];
+		int[] timeStayed = new int[nbrOfFokz];
 
+		for (int i = 0; i < nbrOfFokz; i++)
+		{
+			arrive = sc.nextInt();
+			stay = sc.nextInt();
+
+			allResearchersData[i][0] = arrive;
+			allResearchersData[i][1] = stay;
+
+			arrivalTimes[i] = arrive;
+			timeStayed[i] = stay;
+		}
+
+		Arrays.sort(allResearchersData, Comparator.comparing((int[] arr) -> arr[0]));
+
+		int nbrOfUnlocks = 1;
+		int leave = 0;
+		int timeToWorkstationLock = 0;
+
+		for (int i = 0; i < allResearchersData.length; i++)
+		{
 			if (i > 0)
 			{
-				unlockMinute = allResearchers[i][0];
+				arrive = allResearchersData[i][0];
 			}
 
-			stay = allResearchers[i][1];
+			stay = allResearchersData[i][1];
 
-			arrive = unlockMinute + stay;
+			timeToWorkstationLock = timeout + stay;
 
-			if (arrive > allResearchers[i + 1][0])
+			if (timeToWorkstationLock < arrive)
 			{
 				nbrOfUnlocks++;
 			}
